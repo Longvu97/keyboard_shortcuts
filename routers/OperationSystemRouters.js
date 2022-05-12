@@ -14,7 +14,7 @@ router.post('', validator.body(create), async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.CREATE_OPERTAION_SYSTEM_FAILED));
+    res.json(jsonError(errors.CREATE_OPERTAION_SYSTEM_FAILED));
   }
 });
 
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.OPERATION_SYSTEM_NOT_FOUND));
+    res.json(jsonError(errors.GET_OPERATION_SYSTEM_FAILED));
   }
 });
 
@@ -37,7 +37,7 @@ router.get('', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.OPERATION_SYSTEM_NOT_FOUND));
+    res.json(jsonError(errors.GET_OPERATION_SYSTEM_FAILED));
   }
 });
 
@@ -49,7 +49,7 @@ router.patch('/:id', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.UPDATE_OPERTAION_SYSTEM_FAILED));
+    res.json(jsonError(errors.UPDATE_OPERTAION_SYSTEM_FAILED));
   }
 });
 
