@@ -77,7 +77,7 @@ class KeyShortcutService {
    * Get detail keyboard shortcut
    * 
    * @param {ObjectId} id 
-   * @returns 
+   * @returns {Object}
    */
   async detail(id) {
     const keyShortcut = await KeyShortcut
