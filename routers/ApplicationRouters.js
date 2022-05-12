@@ -14,7 +14,7 @@ router.post('', validator.body(create), async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.CREATE_APPLICATION_FAILED));
+    res.json(jsonError(errors.CREATE_APPLICATION_FAILED));
   }
 });
 
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.APPLICATION_NOT_FOUND));
+    res.json(jsonError(errors.GET_APPLICATION_FAILED));
   }
 });
 
@@ -37,7 +37,7 @@ router.get('', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.APPLICATION_NOT_FOUND));
+    res.json(jsonError(errors.GET_APPLICATION_FAILED));
   }
 });
 
@@ -49,7 +49,7 @@ router.patch('/:id', validator.body(update), async (req, res) => {
     res.json(result);
   } catch (err) {
     console.log(err);
-    res.send(jsonError(errors.UPDATE_APPLICATION_FAILED));
+    res.json(jsonError(errors.UPDATE_APPLICATION_FAILED));
   }
 });
 
