@@ -1,3 +1,7 @@
+### DEPENDENCIES
+- NodeJS: 14.12.0
+- MongoDB: 5.0.5
+
 ### LOCAL
 
 ### BRAND
